@@ -2,16 +2,16 @@ import { Card, Row, Text, Grid } from "@nextui-org/react"
 import { useRouter } from "next/router"
 import { SmallPokemon } from "../../interfaces"
 
-interface PokemonCardProps {
+interface Props {
   pokemon: SmallPokemon
 }
 
-const PokemonCard = ( { pokemon }: PokemonCardProps ) => {
+const PokemonCard = ( { pokemon }: Props ) => {
 
   const router = useRouter();
 
   const handleClick = (): void => {
-    router.push(`pokemon/${ pokemon.id }`)
+    router.push(`/name/${ pokemon.name }`)
   }
 
   return (

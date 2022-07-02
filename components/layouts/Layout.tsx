@@ -6,7 +6,11 @@ type LayoutProps = {
   title?: string;
 }
 
+const origin = typeof window === "undefined" ? "" : window.location.origin
+
 const Layout = ({ children, title }: LayoutProps) => {
+  
+
   return (
     <>
       <Head>
@@ -14,6 +18,10 @@ const Layout = ({ children, title }: LayoutProps) => {
         <meta name="author" content="Kunjo Lee"/>
         <meta name="description" content={`Informacion sobre el pokemon ${ title }`}/>
         <meta name="keywords" content={`${ title }, pokemon, pokedex`}/>
+
+        <meta property="og:title" content={`Information about ${title}`} />
+        <meta property="og:description" content={`About ${title}`} />
+        <meta property="og:image" content={`${origin}/img/banner.png`} />
       </Head>
 
       <Navbar/>

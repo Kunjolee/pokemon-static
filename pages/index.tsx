@@ -6,16 +6,16 @@ import { pokeApi } from '../api';
 import { PokemonListResponse, SmallPokemon } from '../interfaces';
 import { PokemonCard } from '../components/pokemon';
 
+
 interface HomeProps {
   pokemons: SmallPokemon[]
 }
 
 const Home: NextPage<HomeProps> = ({ pokemons }) => {  
-  
-  return (
-    <>        
-      <Layout title="Listado de pokemon">        
 
+  return (
+    <>             
+      <Layout title="Listado de pokemon">       
         <Grid.Container gap={ 2 } justify="flex-start">
           {
             pokemons.map(( pokemon ) => (
@@ -34,7 +34,7 @@ export const getStaticProps: GetStaticProps = async (context) =>{
 
   const pokemons: SmallPokemon[] = data.results.map((item, i) => {
     let id: number = ++i;
-
+        
     return {
       ...item,
       id,
