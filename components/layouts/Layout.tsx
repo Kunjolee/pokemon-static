@@ -14,14 +14,15 @@ const Layout = ({ children, title }: LayoutProps) => {
   return (
     <>
       <Head>
-        <title>{ title || "PokemonApp" }</title>
+        <title>{ title || "Pokemon App" }</title>
         <meta name="author" content="Kunjo Lee"/>
-        <meta name="description" content={`Informacion sobre el pokemon ${ title }`}/>
+        <meta name="description" content={`List of 151 pokemons`}/>
         <meta name="keywords" content={`${ title }, pokemon, pokedex`}/>
-
-        <meta property="og:title" content={`Information about ${title}`} />
-        <meta property="og:description" content={`About ${title}`} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={`List of 151 pokemons`} />
         <meta property="og:image" content={`${origin}/img/banner.png`} />
+
+        <link rel="icon" type="image/png" href={`${origin}/img/pokeball.png`}/>
       </Head>
 
       <Navbar/>
