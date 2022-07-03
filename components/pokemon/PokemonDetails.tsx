@@ -47,7 +47,7 @@ const PokemonDetails = ({ pokemon }: Props ) => {
 
   return (
     <Grid.Container css={{ marginTop: '5px'}} gap={ 2 }  >
-      <Grid xs={4}>
+      <Grid xs={12} sm={4}>
         <Card isHoverable css={{ padding: '30px' }}>
           <Card.Body>
             <Card.Image
@@ -59,7 +59,7 @@ const PokemonDetails = ({ pokemon }: Props ) => {
           </Card.Body>
         </Card>
       </Grid>
-      <Grid xs={8}>          
+      <Grid xs={12} sm={8} >          
         <Card>
           <Card.Header css={{ display: 'flex', justifyContent: 'space-between' }}>
             <Text h1 transform='capitalize'>{ pokemon.name }</Text>
